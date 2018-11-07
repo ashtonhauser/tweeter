@@ -12,6 +12,7 @@
     <link rel="stylesheet" href="/styles/layout.css" type="text/css" />
     <link rel="stylesheet" href="/styles/nav.css" type="text/css"/>
     <link rel="stylesheet" href="/styles/new-tweet.css" type="text/css"/>
+    <link rel="stylesheet" href="/styles/default-tweet.css" type="text/css"/>
 
     <!-- External JS -->
     <script type="text/javascript" src="/vendor/jquery-2.2.3.min.js"></script>
@@ -32,12 +33,30 @@
     <!-- Page-specific (main) content here -->
     <main class="container">
       <section class="new-tweet">
-        <h2>Compose Tweet</h2>
+        <h2 class="new-tweet-title">Compose Tweet</h2>
         <form method="post"  action="/tweets" onsubmit="window.location='/'">
           <textarea id="new-tweet" name="text" placeholder="What are you humming about?"></textarea>
           <input type="submit" value="Tweet">
           <span class="counter">140</span>
         </form>
+      </section>
+      <section class="tweet-container">
+        <article class="logged-tweet" aria-role='tweet-card'>
+          <header class="tweet-header">
+            <img src='https://avataaars.io/?avatarStyle=Circle&topType=LongHair
+            MiaWallace&accessoriesType=Kurt&hairColor=Auburn&facialHairType=Bea
+            rdMedium&facialHairColor=BrownDark&clotheType=GraphicShirt&clotheCo
+            lor=Gray01&graphicType=Skull&eyeType=Surprised&eyebrowType=RaisedEx
+            citedNatural&mouthType=Sad&skinColor=Tanned' alt="Profile Picture"
+            class="profile-picture">
+            <h2 class="user-name">Bill Fields</h2>
+            <small class="user-userusername">@MrFields</small>
+          </header>
+          <p class="user-tweet-body">Little tweet here</p>
+          <footer class="tweet-footer">
+            <span class='post-date' >10 days ago</span>
+          </footer>
+        </article>
       </section>
     </main>
 
