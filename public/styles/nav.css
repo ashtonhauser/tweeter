@@ -32,4 +32,14 @@ nav {
   border-radius: 10px;
   background-color: #E6FDFF;
   color: #029F86;
+  border-color: black;
+}
+
+.new-tweet-button:focus {
+  outline: 0;
+}
+
+.new-tweet-button:hover {
+  color: black;
+  background-color: #ffffff;
 }

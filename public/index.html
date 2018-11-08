@@ -38,11 +38,12 @@
     <main class="container">
       <section class="new-tweet">
         <h2 class="new-tweet-title">Compose Tweet</h2>
-        <form id="newTweetForm" method="post"  action="/tweets">
+        <form id="new-tweet-form" method="post"  action="/tweets">
           <textarea id="new-tweet" name="text" placeholder="What are you humming about?"></textarea>
           <input type="submit" id="new-tweet-submit"value="Tweet">
           <span class="counter">140</span>
         </form>
+        <div class="error-message">*Tweet exceeds character limit or is empty</div>
       </section>
       <section id="tweet-container" class="tweet-container"></section>
     </main>
