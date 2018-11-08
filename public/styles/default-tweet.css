@@ -2,9 +2,10 @@
   width: 45px;
   margin-left: 5px;
   margin-bottom: 5px;
+  margin-top: 5px;
 }
 
-.user-userusername {
+.user-username {
   margin: 10px 10px;
 }
 
@@ -19,16 +20,16 @@
   display: flex;
   height: 50px;
   background-color: #EEEEEE;
-  border-radius: 5px 5px 0 0;
+  border-radius: 7px 7px 0 0;
+  opacity: .65;
 }
 
-/*border cut corners*/
-.tweet-container {
+.logged-tweet {
   margin: 10px 2em 0;
   border-radius: 7px;
   border: solid;
   border-color: #CECECE;
-  border-width: 2px;
+  border-width: 1px;
 }
 
 .user-tweet-body {
@@ -41,4 +42,13 @@
   text-align: left;
   border-top: 1px solid #CECECE;
   padding: 5px 0 5px 5px;
+}
+
+
+.logged-tweet:hover .tweet-header {
+  opacity: 1;
+}
+
+.logged-tweet:hover {
+  border-color: #3d3d3d;
 }

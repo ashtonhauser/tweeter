@@ -6,7 +6,8 @@
 
     <!-- External CSS -->
     <link rel="stylesheet" href="/vendor/normalize-4.1.1.css" type="text/css" />
-    <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:300,300i,700,700i" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:300,30
+    0i,700,700i" rel="stylesheet">
 
     <!-- App CSS -->
     <link rel="stylesheet" href="/styles/layout.css" type="text/css" />
@@ -16,10 +17,12 @@
 
     <!-- External JS -->
     <script type="text/javascript" src="/vendor/jquery-2.2.3.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.22.2/moment.js"></script>
 
     <!-- App JS -->
     <script type="text/javascript" src="/scripts/app.js"></script>
     <script type="text/javascript" src="/scripts/composer-char-counter.js"></script>
+
   </head>
 
   <body>
@@ -34,30 +37,13 @@
     <main class="container">
       <section class="new-tweet">
         <h2 class="new-tweet-title">Compose Tweet</h2>
-        <form method="post"  action="/tweets" onsubmit="window.location='/'">
+        <form id="newTweetForm" method="post"  action="/tweets">
           <textarea id="new-tweet" name="text" placeholder="What are you humming about?"></textarea>
-          <input type="submit" value="Tweet">
+          <input type="submit" id="new-tweet-submit"value="Tweet">
           <span class="counter">140</span>
         </form>
       </section>
-      <section class="tweet-container">
-        <article class="logged-tweet" aria-role='tweet-card'>
-          <header class="tweet-header">
-            <img src='https://avataaars.io/?avatarStyle=Circle&topType=LongHair
-            MiaWallace&accessoriesType=Kurt&hairColor=Auburn&facialHairType=Bea
-            rdMedium&facialHairColor=BrownDark&clotheType=GraphicShirt&clotheCo
-            lor=Gray01&graphicType=Skull&eyeType=Surprised&eyebrowType=RaisedEx
-            citedNatural&mouthType=Sad&skinColor=Tanned' alt="Profile Picture"
-            class="profile-picture">
-            <h2 class="user-name">Bill Fields</h2>
-            <small class="user-userusername">@MrFields</small>
-          </header>
-          <p class="user-tweet-body">Little tweet here</p>
-          <footer class="tweet-footer">
-            <span class='post-date' >10 days ago</span>
-          </footer>
-        </article>
-      </section>
+      <section id="tweet-container" class="tweet-container"></section>
     </main>
 
   </body>
