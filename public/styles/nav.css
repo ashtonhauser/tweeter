@@ -21,3 +21,15 @@ nav {
   font-size: 200%;
   line-height: 80px;
 }
+
+.new-tweet-button {
+  float: right;
+  width: 125px;
+  margin-top: 10px;
+  height: 60px;
+  border: solid;
+  border-width: 1px;
+  border-radius: 10px;
+  background-color: #E6FDFF;
+  color: #029F86;
+}
