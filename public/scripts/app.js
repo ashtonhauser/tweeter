@@ -15,7 +15,8 @@ $(document).ready(function() {
     let userName = currentUser.name;
     let username = currentUser.handle;
     let content = tweetData.content.text;
-    let postDate = moment(tweetData.created_at).fromNow();
+    let formatedDate = moment(tweetData.created_at).format('llll');
+    let postDate = moment(formatedDate, 'llll').fromNow();
     let paragraphContent = $('<p>').text(content);
 
     let $tweet = $(`<article></article>`).appendTo(`.tweet-container`).addClass(`logged-tweet`)
@@ -52,8 +53,8 @@ $(document).ready(function() {
   const $newTweetForm = $('#new-tweet-form');
   $newTweetForm.submit(function(event) {
     event.preventDefault();
-    if (!$('#new-tweet').val() || Number($('.counter')[0].innerHTML) <= 0) {
-      return alert("Tweet must be less than 140 characters, and more than 0.");
+    if (!$('#new-tweet').val() || Number($('.counter')[0].innerHTML) < 0) {
+      $('.error-message').show();
     } else {
       const formData = $newTweetForm.serialize();
       $.ajax({
@@ -61,6 +62,7 @@ $(document).ready(function() {
         'url': '/tweets',
         'data': formData,
         'complete': function(response) {
+          $('.error-message').hide();
           loadTweets();
         }
       });

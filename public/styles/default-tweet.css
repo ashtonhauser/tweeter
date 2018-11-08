@@ -36,6 +36,7 @@
   text-align: left;
   margin-left: 10px;
   margin-right: 10px;
+  overflow-wrap: break-word; 
 }
 
 .tweet-footer {
