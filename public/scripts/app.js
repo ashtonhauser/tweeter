@@ -62,6 +62,7 @@ $(document).ready(function() {
         'url': '/tweets',
         'data': formData,
         'complete': function(response) {
+          $('#new-tweet').val(null);
           $('.error-message').hide();
           loadTweets();
         }
