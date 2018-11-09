@@ -21,5 +21,5 @@ When posting new tweet the name and username of the post will be generated for y
 
 ##Screenshots
 
-!["Screenshot of compose tweet box"]()
-!["Screenshot of tweet feed"]()
+!["Screenshot of compose tweet box"](https://github.com/ashtonhauser/tweeter/blob/master/docs/compose-new-tweet.png)
+!["Screenshot of tweet feed"](https://github.com/ashtonhauser/tweeter/blob/master/docs/feed.png)
