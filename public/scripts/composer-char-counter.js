@@ -1,4 +1,4 @@
-$(document).ready(function () {
+$(document).ready(function() {
   let characters = document.getElementById('new-tweet');
 
   function updateCounter(event) {
